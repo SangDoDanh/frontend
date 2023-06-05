@@ -1,0 +1,77 @@
+<div class="row d-flex justify-content-center" *ngIf="rfEdit">
+  <h2 class="mt-3 mb-3 text-center">Edit Student</h2>
+  <form
+    (keydown.enter)="$event.preventDefault()"
+    (ngSubmit)="onSubmit()"
+    [formGroup]="rfEdit"
+    class="p-4"
+    style="
+      width: 500px;
+      box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.35);
+      border-radius: 10px;
+    "
+  >
+    <div class="mb-3">
+      <label for="fname" class="form-label">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="fname"
+        formControlName="first_name"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="lname" class="form-label">Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lname"
+        formControlName="last_name"
+      />
+    </div>
+
+    <div class="gender-input mb-3">
+      <label for="gender-f" class="me-4">
+        <input
+          id="gender-f"
+          type="radio"
+          name="gender"
+          [value]="'Female'"
+          formControlName="gender"
+        />
+        Female
+      </label>
+
+      <label for="gender-m" class="ms-2">
+        <input
+          type="radio"
+          name="gender"
+          [value]="'Male'"
+          id="gender-m"
+          formControlName="gender"
+        />
+        Male
+      </label>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        formControlName="email"
+      />
+    </div>
+
+    <select class="form-select mb-3" name="class-id" formControlName="class_id">
+      <option value="1">Class-1</option>
+      <option value="2">Class-2</option>
+      <option value="3">Class-3</option>
+    </select>
+
+    <div class="d-flex justify-content-center align-items-center">
+      <button type="submit" class="btn btn-primary w-50">Submit</button>
+    </div>
+  </form>
+</div>

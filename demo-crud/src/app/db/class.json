@@ -1,0 +1,9 @@
+{
+  "classs": [
+    { "id": 1, "name": "class-1" },
+    { "id": 2, "name": "class-2" },
+    { "id": 3, "name": "class-3" },
+    { "id": 4, "name": "class-4" },
+    { "id": 5, "name": "class-5" }
+  ]
+}
