@@ -30,31 +30,4 @@ export class AppService {
   update(s: Employee): Observable<Employee> {
     return this.httpClient.put<Employee>(URL_API + `/${s.id}`, s);
   }
-
-  // searchByName(fname: string): Observable<Student[]> {
-  //   return this.httpClient.get<Student[]>(
-  //     URL_API + `?first_name_like=${fname}`
-  //   );
-  // }
-
-  // searchAllField(s: Student): Observable<Student[]> {
-  //   console.log(
-  //     URL_API +
-  //       `?id_like=${s.id}` +
-  //       `&first_name_like=${s.first_name}` +
-  //       `&email_like=${s.email}` +
-  //       `&last_name_like=${s.last_name}` +
-  //       `&class_id_like=${s.class_id}` +
-  //       `&gender_like=${s.gender}`
-  //   );
-  //   return this.httpClient.get<Student[]>(
-  //     URL_API +
-  //       `?id_like=${s.id}` +
-  //       `&first_name_like=${s.first_name}` +
-  //       `&email_like=${s.email}` +
-  //       `&last_name_like=${s.last_name}` +
-  //       `&class_id_like=${s.class_id}` +
-  //       `&gender_like=${s.gender}`
-  //   );
-  // }
 }
