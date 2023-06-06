@@ -1,1 +1,47 @@
-<p>edit works!</p>
+<div class="row">
+    <h2>Edit Employee</h2>
+  
+    <form [formGroup]="rfEdit" (ngSubmit)="onSubmit()" ngNoForm>
+        <div class="d-none">
+            <label for="id">ID:</label>
+            <input type="text" id="id" formControlName="id" />
+          </div>
+      
+          <div>
+            <label for="firstName">Name:</label>
+            <input type="text" id="firstName" formControlName="name" />
+          </div>
+      
+          <div>
+            <label for="age">Age:</label>
+            <input type="text" id="age" formControlName="age" />
+          </div>
+      
+          <div>
+            <label for="gender">Gender:</label>
+            <select id="gender" formControlName="sex">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+          </div>
+      
+          <div>
+            <label for="classId">Address:</label>
+            <input type="text" id="classId" formControlName="address" />
+          </div>
+          <div *ngIf="url_image">
+            <p>Image</p>
+            <img src="{{url_image}}" alt="">
+          </div>     
+
+          <div>
+            <label for="image">Edit Image:</label>
+            <input (change)="setImage($event)" type="file" id="image"/>
+          </div>
+
+          
+  
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  

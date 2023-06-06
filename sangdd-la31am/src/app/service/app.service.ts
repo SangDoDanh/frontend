@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { Employee } from '../models/employee';
 
-const URL_API = 'http://locahost:3000/...';
+const URL_API = 'http://localhost:3000/employee';
 
 @Injectable({
   providedIn: 'root',
@@ -10,25 +11,25 @@ const URL_API = 'http://locahost:3000/...';
 export class AppService {
   constructor(private httpClient: HttpClient) {}
 
-  // getAll(): Observable<Student[]> {
-  //   return this.httpClient.get<Student[]>(URL_API + '?_sort=id&_order=desc');
-  // }
+  getAll(): Observable<Employee[]> {
+    return this.httpClient.get<Employee[]>(URL_API + '?_sort=id&_order=desc');
+  }
 
-  // getById(id: any): Observable<Student> {
-  //   return this.httpClient.get<Student>(URL_API + `/${id}`);
-  // }
+  getById(id: any): Observable<Employee> {
+    return this.httpClient.get<Employee>(URL_API + `/${id}`);
+  }
 
-  // add(s: Student): Observable<Student> {
-  //   return this.httpClient.post<Student>(URL_API, s);
-  // }
+  add(e: Employee): Observable<Employee> {
+    return this.httpClient.post<Employee>(URL_API, e);
+  }
 
-  // deleteById(id: any): Observable<Student> {
-  //   return this.httpClient.delete<Student>(URL_API + `/${id}`);
-  // }
+  deleteById(id: any): Observable<Employee> {
+    return this.httpClient.delete<Employee>(URL_API + `/${id}`);
+  }
 
-  // update(s: Student): Observable<Student> {
-  //   return this.httpClient.put<Student>(URL_API + `/${s.id}`, s);
-  // }
+  update(s: Employee): Observable<Employee> {
+    return this.httpClient.put<Employee>(URL_API + `/${s.id}`, s);
+  }
 
   // searchByName(fname: string): Observable<Student[]> {
   //   return this.httpClient.get<Student[]>(

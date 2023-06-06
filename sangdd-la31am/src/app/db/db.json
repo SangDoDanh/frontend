@@ -1,0 +1,100 @@
+{
+  "employee": [
+    {
+      "id": 1,
+      "name": "Lottrington",
+      "sex": "Female",
+      "address": "Iles",
+      "age": 96,
+      "image": "../../../assets/images/img1.png"
+    },
+    {
+      "id": 2,
+      "name": "Easom",
+      "sex": "Male",
+      "address": "Igbor",
+      "age": 66,
+      "image": "../../../assets/images/img2.png"
+    },
+    {
+      "id": 3,
+      "name": "Luard",
+      "sex": "Male",
+      "address": "Balung Barat",
+      "age": 37,
+      "image": "../../../assets/images/img1.png"
+    },
+    {
+      "id": 4,
+      "name": "Probbing",
+      "sex": "Female",
+      "address": "Všeruby",
+      "age": 57,
+      "image": "../../../assets/images/img3.png"
+    },
+    {
+      "id": 5,
+      "name": "Burgen",
+      "sex": "Male",
+      "address": "Houston",
+      "age": 77,
+      "image": "../../../assets/images/img2.png"
+    },
+    {
+      "id": 6,
+      "name": "Huggins",
+      "sex": "Female",
+      "address": "Muramatsu",
+      "age": 10,
+      "image": "../../../assets/images/img3.png"
+    },
+    {
+      "id": 7,
+      "name": "Fritchley",
+      "sex": "Female",
+      "address": "Quanshang",
+      "age": 83,
+      "image": "../../../assets/images/img1.png"
+    },
+    {
+      "id": 10,
+      "name": "Carreyette",
+      "sex": "Male",
+      "address": "Dengjiang",
+      "age": 44,
+      "image": "../../../assets/images/img2.png"
+    },
+    {
+      "id": 11,
+      "name": "Santori",
+      "sex": "Female",
+      "address": "Fontinha",
+      "age": 3,
+      "image": "../../../assets/images/img3.png"
+    },
+    {
+      "id": 16,
+      "name": "North",
+      "sex": "Male",
+      "address": "Hongguang",
+      "age": 99,
+      "image": "../../../assets/images/img1.png"
+    },
+    {
+      "id": 20,
+      "name": "Nguyen duy quang",
+      "age": "25",
+      "sex": "Male",
+      "address": "daklak",
+      "image": "../../../assets/images/img2.png"
+    },
+    {
+      "id": 21,
+      "name": "NGuyen C",
+      "age": "60",
+      "sex": "Female",
+      "address": "daklak",
+      "image": "../../../assets/images/img1.png"
+    }
+  ]
+}

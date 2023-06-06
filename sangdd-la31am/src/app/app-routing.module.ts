@@ -4,6 +4,7 @@ import { ListComponent } from './components/list/list.component';
 import { AddComponent } from './components/add/add.component';
 import { EditComponent } from './components/edit/edit.component';
 import { DeleteComponent } from './components/delete/delete.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 const routes: Routes = [
   { path: '', component: ListComponent },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'add', component: AddComponent },
   { path: 'edit/:id', component: EditComponent },
   { path: 'delete/:id', component: DeleteComponent },
+  { path: 'detail/:id', component: DetailComponent },
 ];
 
 @NgModule({

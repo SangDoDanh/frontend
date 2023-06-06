@@ -1,1 +1,54 @@
-<p>add works!</p>
+<div class="row d-flex justify-content-center" *ngIf="rfAdd">
+    <p *ngIf="msg">{{ msg }}</p>
+    <form [formGroup]="rfAdd" (ngSubmit)="onSubmit()" class="fAdd mt-5">
+    <h2 class="text-center mb-4">Add new student</h2>
+
+      <div class="d-none">
+        <label for="id">ID:</label>
+        <input type="text" id="id" formControlName="id" />
+      </div>
+  
+      <div>
+        <label for="firstName">Name:</label>
+        <input type="text" id="firstName" formControlName="name" />
+      </div>
+  
+      <div>
+        <label for="age">Age:</label>
+        <input type="text" id="age" formControlName="age" />
+        <div *ngIf="rfAdd.controls['age'].errors && rfAdd.controls['age'].touched">
+            <div *ngIf="rfAdd.controls['age'].errors['required']">Age is required.</div>
+            <div *ngIf="rfAdd.controls['age'].errors['min']">
+                <p class="text-danger">Tuoi phai tu 18 tro len.</p>
+            </div>
+            <div *ngIf="rfAdd.controls['age'].errors['max']">
+                <p class="text-danger">Tuoi phai nho hon 60.</p>
+            </div>
+          </div>
+      </div>
+  
+      <div>
+        <label for="gender">Gender:</label>
+        <select id="gender" formControlName="sex">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+      </div>
+  
+      <div>
+        <label for="classId">Address:</label>
+        <input type="text" id="classId" formControlName="address" />
+      </div>
+
+      <div>
+        <label for="classId">Image:</label>
+        <input (change)="setImage($event)" type="file" id="classId" formControlName="image" />
+        <div *ngIf="url.length > 0">
+            <img src="{{url}}" alt="" srcset="">
+        </div>
+      </div>
+  
+      <button class="btn btn-success btn-sm mt-3" [disabled]="!rfAdd.valid" type="submit">Submit</button>
+    </form>
+  </div>
+  
